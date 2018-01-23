@@ -1,0 +1,289 @@
+.header {
+    width: 100%;
+    height: 636px;
+    background-image: url("../images/intro-bg.jpg");
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.header_1 {
+    width: 800px;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: 100px;
+    padding-left: 100px;
+    padding-top: 30px;
+    border: 1px solid #000000;
+    transition: all 1s ease;
+    transform: translateX(0px);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #999999;
+}
+
+.header p {
+    font-size: 42px;
+    color: #ffffff;
+}
+
+.header h2 {
+    margin-top: 45px;
+    font-size: 20px;
+    color: #999999;
+}
+
+.middle {
+    width: 100%;
+    height: 636px;
+}
+
+.middle-left {
+    width: 50%;
+    height: 100%;
+    background: #cccccc;
+    float: left;
+    transform: translate(-1000px);
+    transition: .6s;
+}
+
+.middle-right {
+    width: 50%;
+    height: 100%;
+    background: #ffffff;
+    float: right;
+    transform: translate(1000px);
+    transition: .6s all;
+}
+
+.middle-left h3 {
+    margin-top: 100px;
+    margin-left: 45px;
+    font-size: 20px;
+    color: brown;
+}
+
+.middle-left p {
+    font-size: 40px;
+    margin-left: 45px;
+}
+
+.middle-left h4 {
+    margin-left: 45px;
+    font-size: 24px;
+    color: #999999;
+}
+
+.middle-top {
+    width: 600px;
+    height: 70px;
+    background: #999999;
+    margin-left: 45px;
+    margin-top: 50px;
+}
+
+.middle-top p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.middle-bottom {
+    width: 600px;
+    height: 70px;
+    background: #000000;
+    margin-left: 45px;
+    margin-top: 25px;
+}
+
+.middle-bottom p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 70px;
+    color: #ffffff;
+}
+
+.middle-right h3 {
+    margin-top: 100px;
+    margin-left: 45px;
+    font-size: 20px;
+    color: brown;
+}
+
+.middle-right p {
+    font-size: 40px;
+    margin-left: 45px;
+}
+
+.middle-right h4 {
+    margin-left: 45px;
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 550754 */
+    src: url('https://at.alicdn.com/t/font_550754_3d2lohmew523ayvi.eot');
+    src: url('https://at.alicdn.com/t/font_550754_3d2lohmew523ayvi.eot?#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_550754_3d2lohmew523ayvi.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_550754_3d2lohmew523ayvi.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_550754_3d2lohmew523ayvi.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont";
+}
+
+.middle-right i {
+    display: block;
+    margin-left: 45px;
+    margin-top: 45px;
+    float: left;
+}
+
+.middle-right i div {
+    font-size: 45px;
+    color: brown;
+}
+
+.middle-right h5 {
+    float: left;
+    margin-top: 45px;
+    margin-left: 45px;
+    font-size: 20px;
+}
+
+.middle-right h6 {
+    float: left;
+    margin-left: 135px;
+}
+
+.works {
+    width: 100%;
+    height: 636px;
+    background: #cccccc;
+    overflow: hidden;
+}
+
+.works p {
+    margin-left: 540px;
+    margin-top: 40px;
+    font-size: 24px;
+    color: brown;
+}
+
+.works h1 {
+    margin-left: 620px;
+    font-size: 30px;
+}
+
+.works-left {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    margin-top: 20px;
+}
+
+.works-left .click {
+    display: block;
+    width: 20%;
+    height: 200px;
+    background: #999999;
+    margin-top: 30px;
+    float: left;
+    margin-left: 52px;
+    position: relative;
+    overflow: hidden;
+}
+.dong1{
+    transform:rotate(360deg);
+    transition:all .5s ease;
+}
+.dong2{
+    transform: rotate(360deg);
+    transition:all .5s ease;
+}
+.works-left .click img {
+    width: 100%;
+    height: 100%;
+}
+
+.works-left .click:hover img {
+    transform: scale(1.1, 1.1);
+    transition: all .5s;
+}
+
+.works-left .black {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.works-left .click .black:hover {
+    background: rgba(0, 0, 0, .4);
+    transition: all .5s;
+}
+
+.call {
+    width: 100%;
+    height: 636px;
+    background: #999999;
+    overflow: hidden;
+}
+
+.call p {
+    margin-left: 300px;
+    margin-top: 60px;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.call h1 {
+    margin-left: 380px;
+    margin-top: 80px;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.call h2, .call h3 {
+    margin-left: 380px;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 650px;
+    height: 50px;
+    margin-left: 380px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.return {
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+}
+
+.return i .iconfont {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+
+

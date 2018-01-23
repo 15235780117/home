@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="totop">
+    <section class="section">
+        <div class="header">
+            <div class="header_1">
+                <h1>hello,你好</h1>
+                <p>我是..............</p>
+                <p>前端/全栈工程师</p>
+                <p>熟练掌握HTML,CSS,js,jQuery等</p>
+                <h2>更多关于我查看我的作品通过电子邮件联系</h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="middle">
+            <div class="middle-left">
+                <h3>about</h3>
+                <p>更多关于我的</p>
+                <h4>Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud
+                    mollit laboris sunt magna velit culpa consectetur nostrud consectetur labore sed do.</h4>
+                <h4>Lorem ipsum Minim nisi dolore proident Ut dolor quis deserunt voluptate Ut voluptate enim ut
+                    adipisicing fugiat cupidatat nisi adipisicing</h4>
+                <div class="middle-top">
+                    <p>联 系 我</p>
+                </div>
+                <div class="middle-bottom">
+                    <p>下 载 简 历</p>
+                </div>
+            </div>
+            <div class="middle-right">
+                <h3>SERVICES</h3>
+                <p>What I Do.</p>
+                <h4>Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud
+                    mollit laboris sunt magna velit. Ut dolor quis deserunt voluptate.</h4>
+                <i>
+                    <div class="iconfont">&#xe650;</div>
+                </i>
+                <h5>BRANDING</h5>
+                <h6>Lorem ipsum Sit Ut eu Ut commodo velit ea et ex officia dolor laborum do in quis ut in occaecat non
+                    Duis ut sint voluptate esse consequat aute incididunt in voluptate incididunt.</h6>
+                <i>
+                    <div class="iconfont">&#xe616;</div>
+                </i>
+                <h5>PHOTOGRAPHY</h5>
+                <h6>Lorem ipsum Sit Ut eu Ut commodo velit ea et ex officia dolor laborum do in quis ut in occaecat non
+                    Duis ut sint voluptate esse consequat aute incididunt in voluptate incididunt.</h6>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="works">
+            <p>CAREER AND EDUCATION</p>
+            <h1>我 的 作 品.</h1>
+            <div class="works-left">
+                <a href="" class="click dong1">
+                    <div class="black"></div>
+                    <img src="images/nb.jpg" alt="">
+                </a>
+                <a href="" class="click dong1">
+                    <div class="black"></div>
+                    <img src="images/320x220-44.png" alt="">
+                </a>
+                <a href="" class="click dong2">
+                    <div class="black"></div>
+                    <img src="images/suning1.jpg" alt="">
+                </a>
+                <a href="" class="click dong2">
+                    <div class="black"></div>
+                    <img src="images/yidong.jpg" alt="">
+                </a>
+                <a href="" class="click dong1">
+                    <div class="black"></div>
+                    <img src="images/dd.jpg" alt="">
+                </a>
+                <a href="" class="click dong1">
+                    <div class="black"></div>
+                    <img src="images/ff.jpg" alt="">
+                </a>
+                <a href="" class="click dong2">
+                    <div class="black"></div>
+                    <img src="images/zz.jpg" alt="">
+                </a>
+                <a href="" class="click dong2">
+                    <div class="black"></div>
+                    <img src="images/ll.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="call">
+            <p>I'm Available for Freelance Work. Feel Free to Contact Me.</p>
+            <h1>name</h1>
+            <textarea class="input" text="请输入"></textarea>
+            <h2>Email</h2>
+            <textarea class="input"></textarea>
+            <h3>subject</h3>
+            <textarea class="input"></textarea>
+        </div>
+    </section>
+</div>
+<div class="return">
+    <i>
+        <div class="iconfont">&#xe633;</div>
+    </i>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<!--<script src="js/jquery.easing.min.js"></script>-->
+<script src="js/jquery.Transit.js"></script>
+<script>
+    $("#totop").fullpage({
+        verticalCentered: false,
+        anchors: ["p1", "p2", "p3", "p4", "p5"],
+        scrollingSpeed: 800,
+        navigation: true,
+        navigationPosition: "right",
+        navigationTooltips: ["第一屏", "第二屏", "第三屏", "第四屏"],
+        continuousVertical: true,
+        fixedElements: "#menu",
+        menu: "#menu",
+        afterLoad: function (anchor, index) {
+            if (index === 2) {
+                $(".middle-left").transition({x: 0});
+                $(".middle-right").transition({y: 0});
+            }
+            if(index === 1){
+                $(".header_1").transition({x:0})
+            }
+            if (index===3){
+                $(".dong1").transition({rotate:0});
+                $(".dong2").transition({rotate:0})
+
+            }
+        },
+        onLeave: function (index) {
+            if(index===3){
+                $(".dong1").transition({rotate:360});
+                $(".dong2").transition({rotate:360})
+
+            }
+            if(index===1){
+                $(".header_1").transition({x:-1000})
+            }
+            if (index === 2) {
+                $(".middle-left").transition({x: -1000});
+                $(".middle-right").transition({y: 1000});
+            }
+        }
+    });
+</script>
+</html>
