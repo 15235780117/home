@@ -16,8 +16,8 @@
         <div class="header">
             <div class="header_1">
                 <h1>hello,你好</h1>
-                <p>我是..............</p>
-                <p>前端/全栈工程师</p>
+                <p>我是李欣欣</p>
+                <p>前端/工程师</p>
                 <p>熟练掌握HTML,CSS,js,jQuery等</p>
                 <h2>更多关于我查看我的作品通过电子邮件联系</h2>
             </div>
@@ -28,10 +28,20 @@
             <div class="middle-left">
                 <h3>about</h3>
                 <p>更多关于我的</p>
-                <h4>Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud
-                    mollit laboris sunt magna velit culpa consectetur nostrud consectetur labore sed do.</h4>
-                <h4>Lorem ipsum Minim nisi dolore proident Ut dolor quis deserunt voluptate Ut voluptate enim ut
-                    adipisicing fugiat cupidatat nisi adipisicing</h4>
+                <h4>注重效率，偏爱敏捷开发 <br>
+
+                    喜欢尝试，期待新鲜事物 <br>
+
+                    前端即兴趣，兴趣即未来 <br>
+
+                    行路有良友，便是捷径 <br>
+
+                    带上我吧，一起看到更大的世界 <br>
+
+                </h4>
+                <h4>行路有良友，便是捷径 <br>
+
+                    带上我吧，一起看到更大的世界</h4>
                 <div class="middle-top">
                     <p>联 系 我</p>
                 </div>
@@ -42,8 +52,15 @@
             <div class="middle-right">
                 <h3>SERVICES</h3>
                 <p>What I Do.</p>
-                <h4>Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud
-                    mollit laboris sunt magna velit. Ut dolor quis deserunt voluptate.</h4>
+                <h4>1.掌握JavaScript语言。<br>
+
+                    2.熟练运用Photoshop、Sublime text、Atom、Chrome等常用网页设计制作软件。<br>
+
+                    3.精通HTML+CSS网页布局与样式，了解HTML5与CSS3.0。<br>
+
+                    4.有一定的网页设计能力，偏向欧美简约风格。<br>
+
+                    5.善用Axure RP、Sketcher等工具制作网站原型。</h4>
                 <i>
                     <div class="iconfont">&#xe650;</div>
                 </i>
@@ -101,7 +118,8 @@
     </section>
     <section class="section">
         <div class="call">
-            <p>I'm Available for Freelance Work. Feel Free to Contact Me.</p>
+            <p>联系我</p>
+            <h4>灵感 &nbsp;代码 &nbsp;梦想 &nbsp;未来</h4>
             <h1>name</h1>
             <textarea class="input" text="请输入"></textarea>
             <h2>Email</h2>
@@ -112,54 +130,14 @@
     </section>
 </div>
 <div class="return">
-    <i>
-        <div class="iconfont">&#xe633;</div>
-    </i>
+    <a href="#p1">
+        <i class="iconfont">&#xe633;</i>
+    </a>
 </div>
 </body>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
-<!--<script src="js/jquery.easing.min.js"></script>-->
+<script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.Transit.js"></script>
-<script>
-    $("#totop").fullpage({
-        verticalCentered: false,
-        anchors: ["p1", "p2", "p3", "p4", "p5"],
-        scrollingSpeed: 800,
-        navigation: true,
-        navigationPosition: "right",
-        navigationTooltips: ["第一屏", "第二屏", "第三屏", "第四屏"],
-        continuousVertical: true,
-        fixedElements: "#menu",
-        menu: "#menu",
-        afterLoad: function (anchor, index) {
-            if (index === 2) {
-                $(".middle-left").transition({x: 0});
-                $(".middle-right").transition({y: 0});
-            }
-            if(index === 1){
-                $(".header_1").transition({x:0})
-            }
-            if (index===3){
-                $(".dong1").transition({rotate:0});
-                $(".dong2").transition({rotate:0})
-
-            }
-        },
-        onLeave: function (index) {
-            if(index===3){
-                $(".dong1").transition({rotate:360});
-                $(".dong2").transition({rotate:360})
-
-            }
-            if(index===1){
-                $(".header_1").transition({x:-1000})
-            }
-            if (index === 2) {
-                $(".middle-left").transition({x: -1000});
-                $(".middle-right").transition({y: 1000});
-            }
-        }
-    });
-</script>
+<script src="js/index.js"></script>
 </html>
