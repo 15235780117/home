@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 3000px;
+    }
+
+    div {
+        width: 100%;
+        height: 30px;
+        background: red;
+        position: fixed;
+        left: 0;
+        top: -40px;
+        /*display: none;*/
+        transition: all 1s;
+    }
+    #totop{
+        width: 30px;
+        height:30px;
+        background: black;
+        position: fixed;
+        right: 70px;
+        bottom: 70px;
+    }
+    aside{
+        width:1000px;
+        height:500px;
+    }
+    footer{
+        width: 1000px;
+        height: 500px;
+        border:3px solid #000000;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 500px;
+        font-size: 50px;
+    }
+    header{
+        width: 50px;
+        height:300px;
+        background: #ccc;
+        position: fixed;
+        left:calc(50% - 550px);
+        top:200px;
+        /*display: none;*/
+    }
+    header nav{
+        width:50px;
+        height:60px;
+        background: #000000;
+        border: 2px solid #2196f3;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    header nav:hover{
+        background: yellow;
+    }
+    .active{
+        background: yellow;
+    }
+</style>
+<body>
+<div></div>
+<section id="totop"></section>
+<aside></aside>
+<footer>1</footer>
+<footer>2</footer>
+<footer>3</footer>
+<footer>4</footer>
+<footer>5</footer>
+<header>
+    <nav>1</nav>
+    <nav>2</nav>
+    <nav>3</nav>
+    <nav>4</nav>
+    <nav>5</nav>
+</header>
+</body>
+<script>
+    let btn = document.querySelector("div");
+    let totop = document.querySelector("#totop");
+    let btt=document.querySelectorAll("header nav");
+    let bnn=document.querySelectorAll("footer");
+    let bbb=document.querySelector("header");
+    window.onscroll = function () {
+        let st = document.documentElement.scrollTop;
+        if (st > 530) {
+//            btn.style.display="block";
+            btn.style.top = "0"
+        } else {
+//            btn.style.display="none"
+            btn.style.top = "-40px"
+        }
+        if(st > 500){
+            bbb.style.display="block"
+        }else {
+            bbb.style.display="none"
+        }
+        bnn.forEach(function (ele,index) {
+            if(st>ele.offsetTop){
+                for (let i=0;i<btt.length;i++){
+                    btt.classList.remove("active")
+                }
+                btt[index].classList.add("active")
+            }
+        })
+    };
+//    返回顶部
+
+        totop.onclick = function () {
+            let st = document.documentElement.scrollTop;
+            let speed = st * 30 / 500;
+            let t=setInterval(function () {
+                st -= speed;
+                if (st <= 0) {
+                    st = 0;
+                    clearInterval(t)
+                }
+                document.documentElement.scrollTop = st;
+            }, 30);
+        }
+
+//    返回顶部
+//    侧楼层
+
+
+        btt.forEach(function (ele, index) {
+            ele.onclick=function () {
+                let ot=bnn[index].offsetTop;
+                let now=document.documentElement.scrollTop;
+                let speed=(ot-now)*30/300;
+                let time=0;
+                let t=setInterval(function () {
+                    now+=speed;
+                    time+=30;
+                    if (time===300){
+                        clearInterval(t);
+                        now=ot;
+                    }
+                    document.documentElement.scrollTop=now
+                },30)
+            }
+        })
+
+//    侧楼层
+</script>
+</html>
